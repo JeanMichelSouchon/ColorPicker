@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="ColorPicker.css">
+</head>
+<body>
+    <style id="color-style">
+
+    </style>
+    <div id="mainContainer">
+        
+        <div id="secondContainer">
+            <div id="container">
+                <form id="RGBForm">
+                    <legend>RGB:</legend>
+                    <label for="rgbInput">RGB Text:</label>
+                    <input type="number" id="rInputText" placeholder="Enter R value" min="0" max="255">
+                    <input type="number" id="gInputText" placeholder="Enter G value" min="0" max="255">
+                    <input type="number" id="bInputText" placeholder="Enter B value" min="0" max="255">
+                    <br>
+                    <label for="rgbInput">RGB Back:</label>
+                    <input type="number" id="rInputBack" placeholder="Enter R value" min="0" max="255">
+                    <input type="number" id="gInputBack" placeholder="Enter G value" min="0" max="255">
+                    <input type="number" id="bInputBack" placeholder="Enter B value" min="0" max="255">
+                    <br>
+                    <button type="button" onclick="getRGB()">Appliquer</button>
+                    
+                    
+                </form>
+            </div>
+            <div id="container">
+                <form id="HEXForm">
+                    <legend>Hex:</legend>
+                    <label for="rgbInput">Hex Text:</label>
+                    <input type="text" id="aHexInputText" placeholder="Enter first value" maxlength="2">
+                    <input type="text" id="bHexInputText" placeholder="Enter second value" maxlength="2">
+                    <input type="text" id="cHexInputText" placeholder="Enter third value" maxlength="2">
+                    <br>
+                    <label for="rgbInput">Hex Back:</label>
+                    <input type="text" id="aHexInputBack" placeholder="Enter first value" maxlength="2">
+                    <input type="text" id="bHexInputBack" placeholder="Enter second value" maxlength="2">
+                    <input type="text" id="cHexInputBack" placeholder="Enter third value" maxlength="2">
+                    <br>
+                    <button type="button"  onclick="getHEX()">Appliquer</button>
+                </form>
+            </div>
+            <div id="container">
+                <form id="HSLForm">
+                    <legend>HSL:</legend>
+                    <label for="rgbInput">HSL Text:</label>
+                    <input type="number" id="hInputText" placeholder="Enter H value" min="0" max="360">
+                    <input type="range" id="sInputText" placeholder="Enter S value" min="0" max="100">
+                    <input type="range" id="lInputText" placeholder="Enter L value" min="0" max="100">
+                    <br>
+                    <label for="rgbInput">HSL Back:</label>
+                    <input type="number" id="hInputBack" placeholder="Enter H value" min="0" max="360">
+                    <input type="range" id="sInputBack" placeholder="Enter S value" min="0" max="100">
+                    <input type="range" id="lInputBack" placeholder="Enter L value" min="0" max="100">
+                    <br>
+                    <button type="button" onclick="getHSL()">Appliquer</button>
+                </form>
+            </div>
+        </div>
+        <div id="secondContainer">
+                <div id="color-preview" >
+                    <p>Color Preview</p>
+                </div>
+
+        </div>
+
+    </div>
+    
+  <script src="ColorPicker.js"></script>
+  
+</body>
+</html>
+
